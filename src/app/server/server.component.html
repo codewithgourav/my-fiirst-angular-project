@@ -1,0 +1,39 @@
+<!--The string interpolation will always return strings. Please note the {{serverId}} is
+a number yet it doesn't throw any error because it gets converted to string.-->
+
+<!-- <p>The {{'server'}} with the ID {{serverId}} is {{serverStatus}}</p>
+<p>The {{'server'}} with the ID {{serverId}} is {{getServerStatus()}}</p> -->
+
+<!-- This is an event binding where we bind a functionality to the click event and thus 
+can see the output within the p tag -->
+<!-- <button class="btn btn-primary" (click)="createNewServer()">Add Server</button>
+
+<p>{{serverCreationStatus}}</p> -->
+
+<!-- Passing and using data with event binding -->
+
+<!-- <input type="text" class="form-control" (input)="getinputdata($event)">
+
+<p>{{serverName}}</p> -->
+
+<!-- Two way binding using [(ngModel)] an easier approach to the above example -->
+
+<!-- <input type="text" class="form-control" [(ngModel)]="updatedServerName">
+<p>{{updatedServerName}}</p> -->
+
+<!-- Directives -->
+<!-- Directives are instructions in the DOM, Componenets are such instructios in the DOM. When we use the selector of our components we are instruc
+ting angular to add the content of our component template and the logic in our ts code in the place where we use the selector. so components
+are directives with a template , we also have directives without a template.-->
+
+<!-- *ngIf Directives and *ngIf else -->
+<!-- <input type="text" class="form-control" [(ngModel)]="updatedServerName">
+<button class="btn btn-primary" (click)="createNewServer()">Click Me</button>
+<p>{{serverCreationStatus}}</p>
+<p *ngIf="serverCreated; else noServer">Server is created and server name is {{updatedServerName}}</p>
+<ng-template #noServer>
+    <p>No server created</p>
+</ng-template> -->
+
+<!-- ngStyle directive -->
+<p [ngStyle]="{backgroundColor : getColor()}">{{'server'}} with Id {{serverId}} is {{getServerStatus()}}</p>
